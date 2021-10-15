@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/categoriesFragment">
+
+    <fragment
+        android:id="@+id/categoriesFragment"
+        android:name="com.example.eatwell.fragment.CategoriesFragment"
+        android:label="fragment_categories"
+        tools:layout="@layout/fragment_categories" >
+        <action
+            android:id="@+id/action_categoriesFragment_to_mealsFragment"
+            app:destination="@id/mealsFragment" />
+        <action
+            android:id="@+id/action_categoriesFragment_to_areaMealFragment"
+            app:destination="@id/areaMealFragment" />
+        <action
+            android:id="@+id/action_categoriesFragment_to_myRecipesListFragment"
+            app:destination="@id/myRecipesListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mealsFragment"
+        android:name="com.example.eatwell.fragment.MealsFragment"
+        android:label="fragment_meals"
+        tools:layout="@layout/fragment_meals" >
+        <action
+            android:id="@+id/action_mealsFragment_to_detailMealFragment"
+            app:destination="@id/detailMealFragment" />
+        <action
+            android:id="@+id/action_mealsFragment_to_categoriesFragment"
+            app:destination="@id/categoriesFragment" />
+        <action
+            android:id="@+id/action_mealsFragment_to_myRecipesListFragment"
+            app:destination="@id/myRecipesListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/areaMealFragment"
+        android:name="com.example.eatwell.fragment.AreaMealFragment"
+        android:label="fragment_area_meal"
+        tools:layout="@layout/fragment_area_meal" >
+        <action
+            android:id="@+id/action_areaMealFragment_to_detailMealFragment"
+            app:destination="@id/detailMealFragment" />
+        <action
+            android:id="@+id/action_areaMealFragment_to_categoriesFragment"
+            app:destination="@id/categoriesFragment" />
+        <action
+            android:id="@+id/action_areaMealFragment_to_myRecipesListFragment"
+            app:destination="@id/myRecipesListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailMealFragment"
+        android:name="com.example.eatwell.fragment.DetailMealFragment"
+        android:label="fragment_detail_meal"
+        tools:layout="@layout/fragment_detail_meal" >
+        <action
+            android:id="@+id/action_detailMealFragment_to_areaMealFragment"
+            app:destination="@id/areaMealFragment" />
+        <action
+            android:id="@+id/action_detailMealFragment_to_mealsFragment"
+            app:destination="@id/mealsFragment" />
+        <action
+            android:id="@+id/action_detailMealFragment_to_categoriesFragment"
+            app:destination="@id/categoriesFragment" />
+        <action
+            android:id="@+id/action_detailMealFragment_to_myRecipesListFragment"
+            app:destination="@id/myRecipesListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/myRecipesListFragment"
+        android:name="com.example.eatwell.fragment.MyRecipesListFragment"
+        android:label="fragment_my_recipes_list"
+        tools:layout="@layout/fragment_my_recipes_list" >
+        <action
+            android:id="@+id/action_myRecipesListFragment_to_myRecipeFragment"
+            app:destination="@id/myRecipeFragment" />
+        <action
+            android:id="@+id/action_myRecipesListFragment_to_myRecipeFragment2"
+            app:destination="@id/myRecipeFragment" />
+        <action
+            android:id="@+id/action_myRecipesListFragment_to_myRecipeDetailFragment"
+            app:destination="@id/myRecipeDetailFragment" />
+        <action
+            android:id="@+id/action_myRecipesListFragment_to_categoriesFragment"
+            app:destination="@id/categoriesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/myRecipeFragment"
+        android:name="com.example.eatwell.fragment.MyRecipeFragment"
+        android:label="fragment_my_recipe"
+        tools:layout="@layout/fragment_my_recipe" >
+        <action
+            android:id="@+id/action_myRecipeFragment_to_myRecipesListFragment"
+            app:destination="@id/myRecipesListFragment" />
+        <action
+            android:id="@+id/action_myRecipeFragment_to_myRecipesListFragment2"
+            app:destination="@id/myRecipesListFragment" />
+        <action
+            android:id="@+id/action_myRecipeFragment_to_categoriesFragment"
+            app:destination="@id/categoriesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/myRecipeDetailFragment"
+        android:name="com.example.eatwell.fragment.MyRecipeDetailFragment"
+        android:label="fragment_my_recipe_detail"
+        tools:layout="@layout/fragment_my_recipe_detail" >
+        <action
+            android:id="@+id/action_myRecipeDetailFragment_to_myRecipeEditFragment"
+            app:destination="@id/myRecipeEditFragment" />
+        <action
+            android:id="@+id/action_myRecipeDetailFragment_to_myRecipesListFragment"
+            app:destination="@id/myRecipesListFragment" />
+        <action
+            android:id="@+id/action_myRecipeDetailFragment_to_categoriesFragment"
+            app:destination="@id/categoriesFragment" />
+        <action
+            android:id="@+id/action_myRecipeDetailFragment_to_myRecipesListFragment3"
+            app:destination="@id/myRecipesListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/myRecipeEditFragment"
+        android:name="com.example.eatwell.fragment.MyRecipeEditFragment"
+        android:label="fragment_my_recipe_edit"
+        tools:layout="@layout/fragment_my_recipe_edit" >
+        <action
+            android:id="@+id/action_myRecipeEditFragment_to_myRecipesListFragment"
+            app:destination="@id/myRecipesListFragment" />
+    </fragment>
+</navigation>
